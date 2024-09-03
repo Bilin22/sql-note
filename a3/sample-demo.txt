@@ -1,0 +1,95 @@
+This is an example of a what your demo.txt file should look like (but it's
+from an old 343 assignment about online ticket sales, so the specific output
+is not at all like yours).
+
+The most important thing to notice is that the actual output of each query
+is shown in this demo file. Without that output, you will earn 0 marks for
+your queries. If your query files (q1.sql and so on) end with a SELECT statement,
+your query output *will* show up when you import runner.txt. But if you just
+insert your results into a table, no query output will appear (and you will
+get 0). Don't do that. :-)
+
+In the A3 handout, I said that your demo must show both the query and the output.
+This is incorrect, as the runner.txt file I gave you does not display the 
+queries themselves. You just need to show the query output.
+
+Notice also that there are lots of notices given by psql, for instance every
+time it sets the search path ("SET") or inserts a row into a table ("INSERT").
+Each query file that we wrote for this old assignment solution sets the search 
+path, drops any views that would have been created if that query file had been
+previously imported, and defines views. So for each query, you see a bunch of 
+notices along with the output from the query.
+
+
+csc343h-dianeh=> \i runner.txt 
+-------------------- Loading schema and data: --------------------
+
+psql:schema.ddl:32: NOTICE:  schema "ticketchema" does not exist, skipping
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+SET
+INSERT 0 2
+INSERT 0 3
+INSERT 0 6
+INSERT 0 76
+INSERT 0 7
+INSERT 0 13
+INSERT 0 3
+INSERT 0 7
+
+-------------------- Query 1: -----------------------------------
+
+SET
+psql:q1.sql:3: NOTICE:  view "seatcount" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+ concert_id |                 name                  |      datetime       | coalesce |      ?column?      
+------------+---------------------------------------+---------------------+----------+-------------------- 
+        405 | TSO - Elf in Concert                  | 2022-12-10 19:30:00 |      159 | 4.7619047619047619
+        539 | Mariah Carey - Merry Christmas to all | 2022-12-11 20:00:00 |      388 | 6.6666666666666667
+(2 rows)
+
+
+-------------------- Query 2: -----------------------------------
+
+SET
+INSERT 0 2
+ owner_id |                     owner_name                      | venue_num 
+----------+-----------------------------------------------------+-----------
+       18 | Maple Leaf Sports & Entertainment                   |         1
+       97 | The Corporation of Massey Hall and Roy Thomson Hall |         2
+(2 rows)
+
+
+-------------------- Query 3: -----------------------------------
+
+SET
+INSERT 0 3
+ venue_id |    venue_name    | percentage_accessible 
+----------+------------------+-----------------------
+       10 | Massey Hall      |                 14.00
+       77 | ScotiaBank Arena |                 33.33
+(3 rows)
+
+
+-------------------- Query 4: -----------------------------------
+
+SET
+psql:q4.sql:10: NOTICE:  view "purchasecount" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+INSERT 0 1
+ username | ticket_num 
+----------+------------
+ arifvari |          5
+(1 row)

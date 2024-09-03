@@ -1,0 +1,185 @@
+csc343h-nongbili=> \i runner.txt 
+-------------------- Loading schema and data: --------------------
+
+psql:schema.ddl:1: NOTICE:  drop cascades to 31 other objects
+DETAIL:  drop cascades to table staff
+drop cascades to table certification
+drop cascades to table band
+drop cascades to table member
+drop cascades to table studio
+drop cascades to table session
+drop cascades to table support
+drop cascades to table accommodate
+drop cascades to table manage
+drop cascades to table play
+drop cascades to table recordedsegment
+drop cascades to table album
+drop cascades to table track
+drop cascades to table segmentintrack
+drop cascades to table trackinalbum
+drop cascades to table q1
+drop cascades to view manager
+drop cascades to view current
+drop cascades to view countalbum
+drop cascades to view finalcount
+drop cascades to table q2
+drop cascades to view allstaff
+drop cascades to view sessioncount
+drop cascades to table q3
+drop cascades to view totaltime
+drop cascades to view "greatest"
+drop cascades to view artist
+drop cascades to table q4
+drop cascades to view countsession
+drop cascades to view greatestsession
+drop cascades to view withname
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+SET
+INSERT 0 12
+INSERT 0 3
+INSERT 0 1
+INSERT 0 4
+INSERT 0 3
+INSERT 0 7
+INSERT 0 8
+INSERT 0 11
+INSERT 0 8
+INSERT 0 27
+DO
+DO
+DO
+DO
+DO
+DO
+DO
+INSERT 0 2
+INSERT 0 7
+DO
+DO
+DO
+DO
+DO
+DO
+DO
+DO
+DO
+DO
+DO
+DO
+
+-------------------- Query 1: -----------------------------------
+
+SET
+psql:q1.sql:9: NOTICE:  table "q1" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q1.sql:19: NOTICE:  view "manager" does not exist, skipping
+DROP VIEW
+psql:q1.sql:20: NOTICE:  view "current" does not exist, skipping
+DROP VIEW
+psql:q1.sql:21: NOTICE:  view "countalbum" does not exist, skipping
+DROP VIEW
+psql:q1.sql:22: NOTICE:  view "finalcount" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 3
+ studio_id | manager_id | manager_name | album_num 
+-----------+------------+--------------+-----------
+        90 |       1233 | Donna Meagle |         1
+        91 |       1233 | Donna Meagle |         0
+        92 |       1232 | Leslie Knope |         1
+(3 rows)
+
+
+-------------------- Query 2: -----------------------------------
+
+SET
+psql:q2.sql:7: NOTICE:  table "q2" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q2.sql:15: NOTICE:  view "allstaff" does not exist, skipping
+DROP VIEW
+psql:q2.sql:16: NOTICE:  view "sessioncount" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 12
+ artist_id | session_num 
+-----------+-------------
+      1000 |           3
+      1231 |           0
+      1232 |           0
+      1233 |           0
+      1234 |           1
+      2224 |           5
+      4523 |           5
+      5678 |           0
+      6521 |           0
+      6754 |           8
+      7832 |           5
+      9942 |           0
+(12 rows)
+
+
+-------------------- Query 3: -----------------------------------
+
+SET
+psql:q3.sql:7: NOTICE:  table "q3" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q3.sql:15: NOTICE:  view "totaltime" does not exist, skipping
+DROP VIEW
+psql:q3.sql:16: NOTICE:  view "greatest" does not exist, skipping
+DROP VIEW
+psql:q3.sql:17: NOTICE:  view "artist" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 1
+ artist_id | artist_name 
+-----------+-------------
+      6754 | Andy Dwyer
+(1 row)
+
+
+-------------------- Query 4: -----------------------------------
+
+SET
+psql:q4.sql:8: NOTICE:  table "q4" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+psql:q4.sql:18: NOTICE:  view "countsession" does not exist, skipping
+DROP VIEW
+psql:q4.sql:19: NOTICE:  view "greatestsession" does not exist, skipping
+DROP VIEW
+psql:q4.sql:20: NOTICE:  view "withname" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+INSERT 0 1
+ album_id |    album_name     | num_session | num_artist 
+----------+-------------------+-------------+------------
+        1 | The Awesome Album |           4 |          6
+(1 row)
